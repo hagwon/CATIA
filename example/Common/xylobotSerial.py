@@ -13,7 +13,10 @@ class ComPort(xylobot.Protocol):
     
     def open(self):
         if sys.platform.startswith('win'):
-            ports = ['COM%s' % (i + 1) for i in range(256)]
+            #ports = ['COM%s' % (i + 1) for i in range(256)]            
+            #ports =  '/dev/cu.usbmodem14101'
+            #ports = '/dev/tty.usbmodemfa141'
+            ports = 'COM10'
 
             for name in ports:
                 try:
